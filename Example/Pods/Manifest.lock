@@ -1,0 +1,14 @@
+PODS:
+  - DHURLSessionStub (0.1.0)
+
+DEPENDENCIES:
+  - DHURLSessionStub (from `../`)
+
+EXTERNAL SOURCES:
+  DHURLSessionStub:
+    :path: ../
+
+SPEC CHECKSUMS:
+  DHURLSessionStub: 7f61b6e507eae2967db11f4e76a2dfbd7ee35925
+
+COCOAPODS: 0.39.0

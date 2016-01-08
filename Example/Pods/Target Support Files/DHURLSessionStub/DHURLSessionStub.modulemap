@@ -1,0 +1,6 @@
+framework module DHURLSessionStub {
+  umbrella header "DHURLSessionStub-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,6 @@
+framework module Pods_DHURLSessionStub_Tests {
+  umbrella header "Pods-DHURLSessionStub_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}
