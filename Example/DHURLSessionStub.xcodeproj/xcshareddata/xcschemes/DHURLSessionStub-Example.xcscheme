@@ -52,6 +52,26 @@
                ReferencedContainer = "container:DHURLSessionStub.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "F2FEBA4A1C3FC72900B23BF6"
+               BuildableName = "DHURLSessionStub_ExampleTests.xctest"
+               BlueprintName = "DHURLSessionStub_ExampleTests"
+               ReferencedContainer = "container:DHURLSessionStub.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "F2FEBA5C1C3FC81700B23BF6"
+               BuildableName = "Tests.xctest"
+               BlueprintName = "Tests"
+               ReferencedContainer = "container:DHURLSessionStub.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

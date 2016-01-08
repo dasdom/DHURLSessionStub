@@ -17,7 +17,7 @@
 		5728E2FD2794D69E6AAF89A381F3BFD9 /* DHURLSessionStub-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 47B44FC7A71D4613C01AC06EE17E465A /* DHURLSessionStub-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A810C115914CBE912219BD14EB8CC205 /* Pods-DHURLSessionStub_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E7D8C8D17219ED8D53FF79325765143 /* Pods-DHURLSessionStub_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E39B51DF5136DC5EEFB10520A6361298 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
-		EE14B7E43CAEA040E32EB80774CA607E /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E924DEC0EA9F69CD5E4C862B605590 /* ReplaceMe.swift */; };
+		F2FEBA3E1C3FC4C700B23BF6 /* DHURLSessionMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FEBA3D1C3FC4C700B23BF6 /* DHURLSessionMock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,7 +62,6 @@
 		6415954D4832FEF3C02C17BD28151758 /* Pods-DHURLSessionStub_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DHURLSessionStub_Tests-resources.sh"; sourceTree = "<group>"; };
 		7048AF849016B0084B1D7ADFEA3E1B12 /* DHURLSessionStub-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DHURLSessionStub-prefix.pch"; sourceTree = "<group>"; };
 		74156A7673FDCF21A64B436ECA7052E6 /* Pods-DHURLSessionStub_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-DHURLSessionStub_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		79E924DEC0EA9F69CD5E4C862B605590 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ReplaceMe.swift; sourceTree = "<group>"; };
 		88950E713C42CAE6B53777EA22B4FB0B /* Pods-DHURLSessionStub_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-DHURLSessionStub_Example-umbrella.h"; sourceTree = "<group>"; };
 		89020A859624FDA852664B8DAAD458B2 /* Pods-DHURLSessionStub_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DHURLSessionStub_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		8A4F4307250EBF998F281BCE4368204A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -77,6 +76,7 @@
 		D58A3FEED2096CC39AB222B04D70780F /* DHURLSessionStub-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DHURLSessionStub-dummy.m"; sourceTree = "<group>"; };
 		E5686B189812A05062DD8DF330C33CD5 /* Pods-DHURLSessionStub_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DHURLSessionStub_Example.release.xcconfig"; sourceTree = "<group>"; };
 		EB63AA0438327DA6E4565CC4B97E94FA /* Pods-DHURLSessionStub_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-DHURLSessionStub_Example.modulemap"; sourceTree = "<group>"; };
+		F2FEBA3D1C3FC4C700B23BF6 /* DHURLSessionMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DHURLSessionMock.swift; sourceTree = "<group>"; };
 		FE2A5EAB9E97D0119CFFBE4F3FE81992 /* Pods-DHURLSessionStub_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DHURLSessionStub_Tests-dummy.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -118,7 +118,7 @@
 		1F4D055154A7E7998FB1CB956C609F4F /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				79E924DEC0EA9F69CD5E4C862B605590 /* ReplaceMe.swift */,
+				F2FEBA3D1C3FC4C700B23BF6 /* DHURLSessionMock.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -354,7 +354,7 @@
 		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0700;
+				LastSwiftUpdateCheck = 0710;
 				LastUpgradeCheck = 0700;
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
@@ -423,8 +423,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2FEBA3E1C3FC4C700B23BF6 /* DHURLSessionMock.swift in Sources */,
 				036172D904BF3210A33CD5A4081661BB /* DHURLSessionStub-dummy.m in Sources */,
-				EE14B7E43CAEA040E32EB80774CA607E /* ReplaceMe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -520,6 +520,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 53459EFFAE368AC9D95F0A8E8EFBEF02 /* DHURLSessionStub.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -648,6 +649,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 53459EFFAE368AC9D95F0A8E8EFBEF02 /* DHURLSessionStub.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
