@@ -20,11 +20,11 @@ Pod::Spec.new do |s|
                       This pod helps you to write easy unit test stubs for NSURLSession data tasks. At the moment it only supports the block bases API of NSURLSesssion because this is what I use in 95% of the cases. This is useful for example when you want to implement the API client of your app befor the server side is finished or if you want to test the networking of your app without internet connection.
                        DESC
 
-  s.homepage         = "https://github.com/<GITHUB_USERNAME>/DHURLSessionStub"
+  s.homepage         = "https://github.com/dasdom/DHURLSessionStub"
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
   s.author           = { "Dominik Hauser" => "dominik.hauser@dasdom.de" }
-  s.source           = { :git => "https://github.com/<GITHUB_USERNAME>/DHURLSessionStub.git", :tag => s.version.to_s }
+  s.source           = { :git => "https://github.com/dasdom/DHURLSessionStub.git", :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/dasdom'
 
   s.platform     = :ios, '8.0'

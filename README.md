@@ -22,7 +22,7 @@ pod "DHURLSessionStub"
 
 ## Author
 
-Dominik Hauser, dom@dasdom.de
+Dominik Hauser, dominik.hauser@dasdom.de
 
 ## License
 
