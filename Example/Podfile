@@ -1,0 +1,12 @@
+source 'https://github.com/CocoaPods/Specs.git'
+use_frameworks!
+
+target 'DHURLSessionStub_Example', :exclusive => true do
+  pod "DHURLSessionStub", :path => "../"
+end
+
+target 'DHURLSessionStub_Tests', :exclusive => true do
+  pod "DHURLSessionStub", :path => "../"
+
+  
+end
