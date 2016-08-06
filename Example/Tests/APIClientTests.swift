@@ -13,27 +13,32 @@ import DHURLSessionStub
 
 class APIClientTests: XCTestCase {
   
-  var apiClient: APIClient!
+//  var apiClient: APIClient!
   
   override func setUp() {
     super.setUp()
-    apiClient = APIClient()
+    
+//    apiClient = APIClient()
   }
   
   func testFetchingProfile_ReturnsPopulatedUser() {
+    let responseExpectation = expectationWithDescription("User")
     // Arrage
-    let responseString = "{\"login\": \"dasdom\", \"id\": 1234567}"
-    let responseData = responseString.dataUsingEncoding(NSUTF8StringEncoding)!
-    let sessionMock = URLSessionMock(data: responseData, response: nil, error: nil)
-    apiClient.session = sessionMock
+    let apiClient = APIClient()
+    apiClient.session = URLSessionMock(jsonDict: ["login": "dasdom", "id": 1234567])!
     
     // Act
-    apiClient.fetchProfileWithName("dasdom")
+    var catchedUser: User? = nil
+    apiClient.fetchProfileWithName("Foo") { (user, error) in
+      catchedUser = user
+      responseExpectation.fulfill()
+    }
     
     // Assert
-    let user = apiClient.user
-    let expectedUser = User(name: "dasdom", id: 1234567)
-    XCTAssertEqual(user, expectedUser)
+    waitForExpectationsWithTimeout(1) { (error) in
+      let expectedUser = User(name: "dasdom", id: 1234567)
+      XCTAssertEqual(catchedUser, expectedUser)
+    }
   }
   
 }

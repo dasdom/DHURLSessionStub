@@ -19,23 +19,35 @@ Then you can stub your data tasks in your tests by assigning a URLSessionMock to
 
 ```swift
 func testFetchingProfile_ReturnsPopulatedUser() {
+  let responseExpectation = expectationWithDescription("User")
   // Arrage
-  let responseString = "{\"login\": \"dasdom\", \"id\": 1234567}"
-  let responseData = responseString.dataUsingEncoding(NSUTF8StringEncoding)!
-  let sessionMock = URLSessionMock(data: responseData, response: nil, error: nil)
-  apiClient.session = sessionMock
+  let apiClient = APIClient()
+  apiClient.session = URLSessionMock(jsonDict: ["login": "dasdom", "id": 1234567])!
   
   // Act
-  apiClient.fetchProfileWithName("dasdom")
+  var catchedUser: User? = nil
+  apiClient.fetchProfileWithName("Foo") { (user, error) in
+    catchedUser = user
+    responseExpectation.fulfill()
+  }
   
   // Assert
-  let user = apiClient.user
-  let expectedUser = User(name: "dasdom", id: 1234567)
-  XCTAssertEqual(user, expectedUser)
+  waitForExpectationsWithTimeout(1) { (error) in
+    let expectedUser = User(name: "dasdom", id: 1234567)
+    XCTAssertEqual(catchedUser, expectedUser)
+  }
 }
 ```
 
-Have a look at the example project for a complete picture how this works.
+There are two initializers for the URLSessionMock:
+
+```swift
+public convenience init?(jsonDict: [String : AnyObject], response: NSURLResponse? = default, error: NSError? = default)
+
+public init(data: NSData? = default, response: NSURLResponse? = default, error: NSError? = default)
+```
+
+Have a look at the example project for a complete picture how this is used.
 
 ## How it works
 
@@ -58,7 +70,10 @@ Alternatively, download [DHURLSessionMock](https://github.com/dasdom/DHURLSessio
 
 ## Author
 
-Dominik Hauser, dominik.hauser@dasdom.de
+Dominik Hauser, dominik.hauser@dasdom.de   
+[@dasdom](https://twitter.com/dasdom)   
+[Github: dasdom](https://github.com/dasdom)   
+[swiftandpainless.com](http://swiftandpainless.com)
 
 ## License
 
