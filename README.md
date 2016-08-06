@@ -51,7 +51,7 @@ Have a look at the example project for a complete picture how this is used.
 
 ## How it works
 
-It's qite easy. The URLSessionMock captures the completion handler of the data task. When the production code calls resume on the data task, the mock then calls the completion handler with the parameters given in the initializer.
+It's quite easy. The URLSessionMock captures the completion handler of the data task. When the production code calls resume on the data task, the mock then calls the completion handler with the parameters given in the initializer. Have a look! The complete file only has 42 lines of code.
 
 ## Requirements
 
